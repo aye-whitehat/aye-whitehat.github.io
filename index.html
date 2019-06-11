@@ -466,7 +466,7 @@
                 
               
 
-              <time title="创建时间：2019-06-11 22:55:00 / 修改时间：23:23:18" itemprop="dateCreated datePublished" datetime="2019-06-11T22:55:00+08:00">2019-06-11</time>
+              <time title="创建时间：2019-06-11 22:55:00 / 修改时间：23:27:33" itemprop="dateCreated datePublished" datetime="2019-06-11T22:55:00+08:00">2019-06-11</time>
             
 
             
@@ -539,10 +539,10 @@
 <p><strong>密码题目在最下方的whctf2017.py</strong></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/7373593-c3511651c1d6bd66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <p>nc 118.31.18.75 20013 与服务器交互</p>
-<h4 id="第一步，过md5"><a href="#第一步，过md5" class="headerlink" title="第一步，过md5"></a>第一步，过md5</h4><p><img src="http://upload-images.jianshu.io/upload_images/7373593-c246567d2694277f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br><strong>md5脚本为最下方的md5.py</strong><br>之前都是用xrange生成随机长度，这次试一下生成固定长度的字符串，而且字符集合可以自己选择，没准以后哪次CTF就能用到<br><img src="http://upload-images.jianshu.io/upload_images/7373593-942db33dd9681099.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<h4 id="第2步rsa数学推导"><a href="#第2步rsa数学推导" class="headerlink" title="第2步rsa数学推导"></a>第2步rsa数学推导</h4><p>要求输入x和y，这里主要考rsa的原理，类似数学等价推导</p>
+<h2 id="第一步，过md5"><a href="#第一步，过md5" class="headerlink" title="第一步，过md5"></a>第一步，过md5</h2><p><img src="http://upload-images.jianshu.io/upload_images/7373593-c246567d2694277f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br><strong>md5脚本为最下方的md5.py</strong><br>之前都是用xrange生成随机长度，这次试一下生成固定长度的字符串，而且字符集合可以自己选择，没准以后哪次CTF就能用到<br><img src="http://upload-images.jianshu.io/upload_images/7373593-942db33dd9681099.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<h2 id="第2步rsa数学推导"><a href="#第2步rsa数学推导" class="headerlink" title="第2步rsa数学推导"></a>第2步rsa数学推导</h2><p>要求输入x和y，这里主要考rsa的原理，类似数学等价推导</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/7373593-a890ab593140de45.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<h4 id="第3步爆破p"><a href="#第3步爆破p" class="headerlink" title="第3步爆破p"></a>第3步爆破p</h4><ul>
+<h2 id="第3步爆破p"><a href="#第3步爆破p" class="headerlink" title="第3步爆破p"></a>第3步爆破p</h2><ul>
 <li>成功交互后返回了s，其中s是p的前部分，脚本中用p4表示</li>
 <li>已知e n 要爆破1024位的p，至少需要知道前576位二进制，即前144位16进制，但是返回的s是长位142位的十六进制，需要爆破两位，凑到144位</li>
 <li><p>这里要用到sagaMath来调用强大的计算能力，但是saga有点大，这里推荐一个在线的saga运行网址 <a href="https://cocalc.com/" target="_blank" rel="noopener">https://cocalc.com/</a></p>
@@ -554,7 +554,7 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/7373593-7a940bb2016b2e39.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <p><strong>142+2.py截图</strong></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/7373593-ceaa4dd0df17176a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<p>####第4步求出明文m<br>p q c 都知道了，so easy<br><strong>脚本为最下面的 rsa.py</strong></p>
+<p>##第4步求出明文m<br>p q c 都知道了，so easy<br><strong>脚本为最下面的 rsa.py</strong></p>
 <p><code>git clone https://github.com/hellman/libnum</code></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/7373593-2137a12638ef2065.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/7373593-a084a27f3d34ce37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
