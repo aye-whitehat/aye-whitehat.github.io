@@ -466,7 +466,7 @@
                 
               
 
-              <time title="创建时间：2019-06-11 22:55:00 / 修改时间：23:33:24" itemprop="dateCreated datePublished" datetime="2019-06-11T22:55:00+08:00">2019-06-11</time>
+              <time title="创建时间：2019-06-11 22:55:00 / 修改时间：23:35:26" itemprop="dateCreated datePublished" datetime="2019-06-11T22:55:00+08:00">2019-06-11</time>
             
 
             
@@ -607,7 +607,7 @@
 <p>闭合后的sql查询语句应该是这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from user where username = &quot;&quot;^(ascii(mid(database(),1,1))&gt;0)^&quot;&quot;and password = &quot;&quot;</span><br><span class="line">空字符串、1、空字符串 这三者异或后返回 1</span><br></pre></td></tr></table></figure></p>
 <p>php代码的sql语句大概是这么写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sql = select * from user where username = &quot; .$username. &quot;and pass=&quot;.md5($password).&quot;</span><br></pre></td></tr></table></figure></p>
 <ul>
-<li>盲注得到密码，<code>1s2evfh345w$~*213eg3%</code></li>
+<li>盲注得到密码，<code>1s2evfh345w$~*213eg3%</code></li>
 <li>那么现在来到最坑的一步了，这里想骂出题人<br>用户名<code>admin</code>和密码<code>1s2evfh345w$~*213eg3%</code>去登陆，结果没反应？？？？？正常情况下，登陆成功后应该302跳转啊！！！！</li>
 <li>后面才知道有个admin.php，登陆成功后，在地址栏，手动将 index.php改成admin.php 。。。。flag就在cookie里面</li>
 </ul>
